@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cutting, Mounting & Wiring — Frames</title>
+
+  <style>
+    :root{
+      --bg:#071025;
+      --muted:#9aa4b2;
+      --white:#eef2ff;
+      --max:900px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, sans-serif;
+      background:#071025;
+      color:var(--white);
+      line-height:1.4;
+    }
+
+    .page{
+      max-width:var(--max);
+      margin:24px auto;
+      padding:0 16px;
+    }
+
+    header{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+
+    .logo{
+      width:56px;height:56px;
+      background:linear-gradient(135deg,#60a5fa,#38bdf8);
+      border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:18px;color:#04263b;
+    }
+
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    /* Frame widget */
+    .frame-widget{
+      margin:20px 0;
+      background:rgba(255,255,255,0.02);
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      overflow:visible;
+      box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    /* Text area */
+    .frame-body{
+      max-width:var(--max);
+      padding:16px;
+      margin:0 auto;
+    }
+
+    .frame-desc{
+      font-size:15px;
+      color:var(--muted);
+    }
+
+    /* Full-width image */
+    .frame-widget img{
+      width:100%;
+      max-width:none;
+      display:block;
+      object-fit:cover;
+      border-top:1px solid rgba(255,255,255,0.04);
+    }
+
+    /* Full-width video */
+    .frame-widget video{
+      width:100%;
+      max-width:none;
+      /* margin-left:calc(50% - 50vw); */
+      display:block;
+      object-fit:cover;
+      background:black;
+      border-top:1px solid rgba(255,255,255,0.04);
+    }
+
+    .note{
+      font-size:13px;color:#ffe9c9;
+      background:rgba(255,255,200,0.05);
+      padding:10px;border-radius:8px;
+      margin-top:20px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+<header>
+  <div class="logo">CT</div>
+  <div>
+    <h1>Microcontroller & XInput Setup</h1>
+  </div>
+</header>
+
+
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">🎙️ To emulate an Xbox controller, I used an Arduino Pro Micro for its native USB HID capability. That means it can pretend to be a USB device—like a keyboard, mouse, or even a game controller. The Arduino Uno or Nano can’t do this. </p>
+	<p class="frame-desc"><i>Collect keyboard and mouse images yourself. You can find some Xbox controller images from here <a href="https://www.xbox.com/en-IN/accessories/controllers/xbox-wireless-controller">https://www.xbox.com/en-IN/accessories/controllers/xbox-wireless-controller</a>. I give you the arduino images</i>
+	</p>
+  </div>
+
+  <div class="frame-body">
+    <p class="frame-desc">Arduino uno.png</p>
+  </div>
+
+  <img src="Arduino uno.png" alt="Frame 1 image">
+
+  <div class="frame-body">
+    <p class="frame-desc">arduino nano.jpg</p>
+  </div>
+
+  <img src="arduino nano.jpg" alt="Frame 1 image">
+
+  <div class="frame-body">
+    <p class="frame-desc">arduino pro micro.jpg</p>
+  </div>
+
+  <img src="arduino pro micro.jpg" alt="Frame 1 image">
+</article>
+
+
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">🎙️ Now, Xbox controllers use something called the <b>XInput</b> system to talk to a PC. So, we need the Arduino XInput Library.
+But before we can use the library, we have to set up our Pro Micro to act like an <b>XInput SparkFun board</b>. Here’s how:
+	</p>
+	<p class="frame-desc"><i>Display the <b>bold</b> texts on the screen, they are important. You can find some Xbox controller images from here <a href="https://www.xbox.com/en-IN/accessories/controllers/xbox-wireless-controller">https://www.xbox.com/en-IN/accessories/controllers/xbox-wireless-controller</a>. Try to show an image or animation depicting an xbox controller connected to a pc, here's a sample for inspiration.</i>
+	</p>
+  </div>
+
+  <div class="frame-body">
+    <p class="frame-desc">connecting-an-Xbox-controller-to-a-laptop.jpg</p>
+  </div>
+
+  <img src="connecting-an-Xbox-controller-to-a-laptop.jpg" alt="Frame 2 image">
+</article>
+
+
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">🎙️ First, go to the “Arduino XInput Board Packages” GitHub repo and copy the URL.
+Then, in the Arduino IDE, open File → Preferences, and paste that URL into the “Additional Board Manager URLs” field.
+Next, open the Boards Manager, search for XInput, and install “XInput AVR Boards” and “XInput SparkFun Boards”.
+Once that’s done, go to the Library Manager, search for XInput again, and install “XInput by David Madison”. Now you’re all set.</p>
+  </div>
+
+  <div class="frame-body">
+    <p class="frame-desc">installing xinput packages.mp4 (voice sync-ed)</p>
+  </div>
+
+  <video src="installing xinput packages.mp4" controls></video>
+</article>
+
+
+<!-- Add your remaining frames the same way -->
+<!--
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">...</p>
+  </div>
+  <img src="frame-x.jpg">
+</article>
+
+or
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">...</p>
+  </div>
+  <video src="frame-x.mp4" controls></video>
+</article>
+-->
+
+<div class="note">
+  Replace <code>frame-*.jpg</code> or <code>frame-*.mp4</code> with your real files.  
+  You can mix images and videos freely—each frame remains a single column widget.
+</div>
+
+</div>
+</body>
+</html>

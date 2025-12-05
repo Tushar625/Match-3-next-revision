@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cutting, Mounting & Wiring — Full-width Frames</title>
+  <style>
+    :root{
+      --bg:#071025;
+      --card:#081225;
+      --muted:#9aa4b2;
+      --accent:#60a5fa;
+      --white:#eef2ff;
+      --content-max:900px;
+    }
+
+    /* Reset & base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#041024 0%, #071025 100%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Page header inside centered column; images will be full-bleed */
+    .page {
+      max-width:var(--content-max);
+      margin:24px auto;
+      padding:0 16px;
+    }
+    header{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      background:linear-gradient(135deg,var(--accent),#38bdf8);
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#04263b;
+      font-size:18px;
+      flex-shrink:0;
+    }
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    /* Frame widget: each one is a top-to-bottom column
+       The image is full-bleed (screen width) while the caption/content stays centered.
+    */
+    .frame-widget{
+      margin:18px 0;
+      border-radius:10px;
+      overflow:visible;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 8px 28px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* Full-bleed image technique:
+       - image uses width:100vw to span viewport,
+       - then it's pulled left by calc(50% - 50vw) so a centered container can keep captions centered.
+    */
+    .frame-widget img{
+      display:block;
+      width:100%;
+      max-width:none;
+      height:auto;
+      object-fit:cover;
+      min-height:200px;
+      border-top-left-radius:10px;
+      border-top-right-radius:10px;
+      box-shadow: inset 0 -40px 60px rgba(0,0,0,0.25);
+      border-bottom: 3px solid rgba(255,255,255,0.02);
+    }
+
+    /* Content area below image stays inside the centered column */
+    .frame-body{
+      max-width:var(--content-max);
+      margin:0 auto;
+      padding:14px 16px;
+    }
+    .frame-title{
+      font-weight:600;
+      margin:0 0 6px;
+      font-size:16px;
+      color:var(--white);
+    }
+    .frame-desc{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Small meta + footer */
+    .meta{color:var(--muted);font-size:13px;margin-top:6px}
+    .note{font-size:13px;color:#ffe9c9;background: linear-gradient(90deg, rgba(255,230,200,0.03), rgba(255,230,200,0.01)); padding:10px;border-radius:8px;margin:12px 0;color:#ffecd3}
+    .footer{font-size:13px;color:var(--muted);text-align:center;padding:16px 0}
+
+    /* Ensure header area doesn't become too wide on very narrow screens */
+    @media (max-width:420px){
+      .frame-body{padding:12px}
+      h1{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">CT</div>
+      <div>
+        <h1>Cutting, Mounting &amp; Wiring</h1>
+        <p class="lead">Each frame is a single vertical widget; images span the full screen width.</p>
+      </div>
+    </header>
+
+    <!-- Frame 1 widget -->
+    <article class="frame-widget" id="frame-1">
+      <img src="build frames/gamepd build frame 1.png" alt="Frame 1 — Paper board with dimensions">
+      <div class="frame-body">
+        <div class="frame-title">Frame 1 — Paper board with dimensions</div>
+        <div class="frame-desc">🎙️ "This is the paper board I got from the old Note book, (28.2 cm by 18.2 cm.)" — Show the board on a wooden background with animated dimension marks.</div>
+      </div>
+    </article>
+
+    <!-- Frame 2 widget -->
+    <article class="frame-widget" id="frame-2">
+      <img src="build frames/gamepd build frame 2.png" alt="Frame 2 — Split in two">
+      <div class="frame-body">
+        <div class="frame-title">Frame 2 — Split in two</div>
+        <div class="frame-desc">🎙️ "I split it in three, and cut these shapes inspired by the play station controller." — Show splitting into 2 pieces.</div>
+      </div>
+    </article>
+
+    <!-- Frame 3 widget -->
+    <article class="frame-widget" id="frame-3">
+      <img src="build frames/gamepd build frame 3.png" alt="Frame 3 — Split in three">
+      <div class="frame-body">
+        <div class="frame-title">Frame 3 — Split in three</div>
+        <div class="frame-desc">📽 Show the board split into three pieces.</div>
+      </div>
+    </article>
+
+    <!-- Frame 4 widget -->
+    <article class="frame-widget" id="frame-4">
+      <img src="build frames/gamepd build frame 4a.png" alt="Frame 4 — Cut shapes">
+	  <img src="build frames/gamepd build frame 4b.png" alt="Frame 4 — Cut shapes">
+      <div class="frame-body">
+        <div class="frame-title">Frame 4.a, 4.b — Cut shapes</div>
+        <div class="frame-desc">📽 Close-up of cutting the controller-like shapes.</div>
+      </div>
+    </article>
+
+    <!-- Frame 5 & 6 widget -->
+    <article class="frame-widget" id="frame-5">
+      <img src="build frames/gamepd build frame 5.png" alt="Frames 5">
+	  <img src="build frames/gamepd build frame 6a.png" alt="Frames 5">
+	  <img src="build frames/gamepd build frame 6b.png" alt="Frames 5">
+      <div class="frame-body">
+        <div class="frame-title">Frames 5, 6.a, 6.b — Joystick attachment</div>
+        <div class="frame-desc">🎙️ "Now, I attach two joysticks on the bottom face, secure them with bolts, cut holes to pass the wires. On the top face, I cut holes to access the joysticks." — Show joystick attachment steps.</div>
+      </div>
+    </article>
+
+    <!-- Frame 7 widget -->
+    <article class="frame-widget" id="frame-7">
+      <img src="The bolts frame 7a.jpg" alt="Frame 7 — Real controller with bolts">
+	  <img src="The bolts frame 7b.jpg" alt="Frame 7 — Real controller with bolts">
+	  <img src="The bolts frame 7c.jpg" alt="Frame 7 — Real controller with bolts">
+      <div class="frame-body">
+        <div class="frame-title">Frame 7.a, 7.b, 7.c — Real controller with bolts</div>
+        <div class="frame-desc">📽 Photo of the real controller showing bolts (Highlight) attaching joysticks.</div>
+      </div>
+    </article>
+
+    <!-- Frame 8 widget -->
+    <article class="frame-widget" id="frame-8">
+      <img src="build frames/gamepd build frame 8.png" alt="Frame 8 — Wire & access holes">
+      <div class="frame-body">
+        <div class="frame-title">Frame 8 — holes on bottom face to pass joystick wires</div>
+        <div class="frame-desc">📽 Holes to pass joystick wires</div>
+      </div>
+    </article>
+
+    <!-- Frame 8x widget -->
+    <article class="frame-widget" id="frame-8x">
+      <img src="build frames/gamepd build frame 8xa.png" alt="Frame 8 — Wire & access holes">
+	  <img src="build frames/gamepd build frame 8xb.png" alt="Frame 8 — Wire & access holes">
+      <div class="frame-body">
+        <div class="frame-title">Frame 8xa, 8xb — holes on top face to access the joysticks</div>
+        <div class="frame-desc">📽 Holes on the top face to access joysticks.</div>
+      </div>
+    </article>
+
+    <!-- Frame 9 widget -->
+    <article class="frame-widget" id="frame-9">
+      <img src="frame-9.jpg" alt="Frame 9 — Building blocks & thickness">
+      <div class="frame-body">
+        <div class="frame-title">Frame 9 — Building blocks &amp; thickness</div>
+        <div class="frame-desc">🎙️ "To complete the shape, I create several little blocks by sticking paper boards together, and glue them on these spots and glue the top face on top of them." — Show stacked pieces and finished block.</div>
+      </div>
+    </article>
+
+    <!-- Frame 10 widget -->
+    <article class="frame-widget" id="frame-10">
+      <img src="build frames/gamepd build frame 10a.png" alt="Frame 10 — Reveal spots & top face">
+	  <img src="build frames/gamepd build frame 10b.png" alt="Frame 10 — Reveal spots & top face">
+	  <img src="build frames/gamepd build frame 10c.png" alt="Frame 10 — Reveal spots & top face">
+	  <img src="build frames/gamepd build frame 10d.png" alt="Frame 10 — Reveal spots & top face">
+	  <img src="build frames/gamepd build frame 10e.png" alt="Frame 10 — Reveal spots & top face">
+	  <img src="build frames/gamepd build frame 11.png" alt="Frame 10 — Reveal spots & top face">
+      <div class="frame-body">
+        <div class="frame-title">Frames 10(a-e)–11 — Reveal spots &amp; top face</div>
+        <div class="frame-desc">📽 Show spots (support columns) becoming visible one by one and then show the top face placed over them.</div>
+      </div>
+    </article>
+
+    <!-- Frame 12 widget -->
+    <article class="frame-widget" id="frame-11">
+      <img src="top view of real game pad frame 12.jpg" alt="Frame 12 — Buttons & soldering closeup">
+      <div class="frame-body">
+        <div class="frame-title">Frame 12 — Buttons &amp; soldering closeup</div>
+        <div class="frame-desc">🎙️ "Now I attach the buttons and wire them up to get this result. I also added these bumper and trigger buttons. Just a little warning, this soldering was not easy." — top view of the real gamepad, and closeup of the buttons.</div>
+      </div>
+    </article>
+
+    <!-- Frame 13 widget -->
+    <article class="frame-widget" id="frame-12">
+      <img src="Front view Frame 13.jpg" alt="Frame 13 — Front view with bumpers & triggers">
+      <div class="frame-body">
+        <div class="frame-title">Frame 13 — Front view with bumpers &amp; triggers</div>
+        <div class="frame-desc">📽 Front view showing bumper/trigger assembly and the supporting paperboard piece.</div>
+      </div>
+    </article>
+
+    <!-- Final / Arduino widget -->
+    <article class="frame-widget" id="frame-final">
+      <img src="paper holding pro micro.jpg" alt="Final — Wiring to Arduino Pro Micro">
+      <div class="frame-body">
+        <div class="frame-title">Final — paper holding Arduino Pro Micro</div>
+        <div class="frame-desc">🎙️ "Finally, I connect these wires to the Arduino Pro Micro, and use a piece of paper, glued to the bottom face, to hold it in place, it is surprisingly rigid." — Show glued paper holding board, plug/unplug demonstration (included in the folder), to show the strength of the paper </div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
