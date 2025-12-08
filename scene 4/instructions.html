@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cutting, Mounting & Wiring — Frames</title>
+
+  <style>
+    :root{
+      --bg:#071025;
+      --muted:#9aa4b2;
+      --white:#eef2ff;
+      --max:900px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, sans-serif;
+      background:#071025;
+      color:var(--white);
+      line-height:1.4;
+    }
+
+    .page{
+      max-width:var(--max);
+      margin:24px auto;
+      padding:0 16px;
+    }
+
+    header{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+
+    .logo{
+      width:56px;height:56px;
+      background:linear-gradient(135deg,#60a5fa,#38bdf8);
+      border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;font-size:18px;color:#04263b;
+    }
+
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    /* Frame widget */
+    .frame-widget{
+      margin:20px 0;
+      background:rgba(255,255,255,0.02);
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      overflow:visible;
+      box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    /* Text area */
+    .frame-body{
+      max-width:var(--max);
+      padding:16px;
+      margin:0 auto;
+    }
+
+    .frame-desc{
+      font-size:15px;
+      color:var(--muted);
+    }
+
+    /* Full-width image */
+    .frame-widget img{
+      width:100%;
+      max-width:none;
+      display:block;
+      object-fit:cover;
+      border-top:1px solid rgba(255,255,255,0.04);
+    }
+
+    /* Full-width video */
+    .frame-widget video{
+      width:100%;
+      max-width:none;
+      /* margin-left:calc(50% - 50vw); */
+      display:block;
+      object-fit:cover;
+      background:black;
+      border-top:1px solid rgba(255,255,255,0.04);
+    }
+
+    .note{
+      font-size:13px;color:#ffe9c9;
+      background:rgba(255,255,200,0.05);
+      padding:10px;border-radius:8px;
+      margin-top:20px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+<header>
+  <div class="logo">CT</div>
+  <div>
+    <h1>The Results (the demonstration videos are very large so I have put only the thumbnails here)</h1>
+  </div>
+</header>
+
+
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">🎙️ And now... here it is — the final result: The Paperboard Controller.</p>
+  </div>
+
+  <div class="frame-body">
+    <p class="frame-desc">showing off the gamepad.mp4</p>
+  </div>
+
+  <img src="showing off the gamepad.png">
+</article>
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">🎙️ I tested it for a while, and everything worked just fine, So... time to play some games!</p>
+
+	<p class="frame-desc"><i>following demonstration footages needs to be flipped horizontally, because these footages represents the mirror images of the original view</i></p>
+  </div>
+
+  <div class="frame-body">
+    <p class="frame-desc">gamepad test.png</p>
+  </div>
+
+  <img src="gamepad test.png">
+
+  <div class="frame-body">
+    <p class="frame-desc"><i>
+		<br><br>For the following game demonstrations, you must mention the name of the game on the screen while displaying their footage.
+		<br><br><b>Grand Theft Auto Vice City</b>
+		<br><b>Satryn</b>
+		<br><b>Need for Speed: Most Wanted 2005</b>
+		<br><b>Super Mario World 1990</b>
+		<br><br>In the gta vicecity demo, you will find the following scenes, car driving scenes, tank rampage and a final stunt, in this exact sequence. Put small portions of each scenes in the final demonstration video.
+		<br><br>NFS is the best demonstration footage, so display it for a long time, viewers would love it. For the remaining games keep them up for short interval, just enough that viewer can see that I am playing it with my gamepad.
+		<br><br>You decide in which sequence you wanna display the games, my suggestion is "Mario->Satryn->GTA->NFS"
+		<br><br>I have added 2 demonstration footages of Super Mario, you decide from which you wanna take the final clip
+		<br><br>Finally, I wanna add that, the creative decision is yours, you can change the display sequence if needed, change the sounds or even make something like a film trailer, if you wish.
+	</i>😉</p>
+  </div>
+
+
+  <div class="frame-body">
+    <p class="frame-desc">super mario.png</p>
+  </div>
+
+  <img src="super mario.png">
+
+  <div class="frame-body">
+    <p class="frame-desc">satryn-win.png</p>
+  </div>
+
+  <img src="satryn-win.png">
+
+  <div class="frame-body">
+    <p class="frame-desc">gta vicecity.png</p>
+  </div>
+
+  <img src="gta vicecity.png">
+
+  <div class="frame-body">
+    <p class="frame-desc">Nfs 2005.png</p>
+  </div>
+
+  <img src="Nfs 2005.png">
+
+</article>
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">🎙️ Thanks for watching Folks, have a nice day.</p>
+	<p class="frame-desc"><i>Use your imagination...</i></p>
+  </div>
+</article>
+
+<!-- Add your remaining frames the same way -->
+<!--
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">...</p>
+  </div>
+  <img src="frame-x.jpg">
+</article>
+
+or
+
+<article class="frame-widget">
+  <div class="frame-body">
+    <p class="frame-desc">...</p>
+  </div>
+  <video src="frame-x.mp4" controls></video>
+</article>
+-->
+
+</div>
+</body>
+</html>
